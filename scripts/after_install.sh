@@ -1,3 +1,11 @@
 #!/bin/bash
-cd /home/ec2-user/digital_library
-pip3 install -r requirements.txt
+
+echo "Running AfterInstall script"
+
+cd /home/ec2-user/app
+
+# Install requirements
+pip3 install --user -r requirements.txt
+
+# Make main app executable
+chmod +x app.py
